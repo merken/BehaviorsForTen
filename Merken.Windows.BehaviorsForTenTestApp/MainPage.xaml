@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Merken.Windev.BehaviorsForTenTestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Merken.Windev.BehaviorsForTenTestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Merken.Windev.BehaviorsForTen"
+    xmlns:behaviors="using:Merken.Windev.BehaviorsForTenTestApp.Behaviors"
+    xmlns:actions="using:Merken.Windev.BehaviorsForTenTestApp.Actions"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <interactivity:Interaction.Behaviors>
+            <behaviors:ItemTappedBehavior>
+                <behaviors:ItemTappedBehavior.Actions>
+                    <actions:ShowMessageDialogAction/>
+                </behaviors:ItemTappedBehavior.Actions>
+            </behaviors:ItemTappedBehavior>
+        </interactivity:Interaction.Behaviors>
+    </Grid>
+</Page>
