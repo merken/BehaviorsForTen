@@ -6,17 +6,33 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Merken.Windev.BehaviorsForTen"
+    xmlns:core="using:Merken.Windev.BehaviorsForTen.Core"
     xmlns:behaviors="using:Merken.Windev.BehaviorsForTenTestApp.Behaviors"
     xmlns:actions="using:Merken.Windev.BehaviorsForTenTestApp.Actions"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <interactivity:Interaction.Behaviors>
-            <behaviors:ItemTappedBehavior>
-                <behaviors:ItemTappedBehavior.Actions>
-                    <actions:ShowMessageDialogAction/>
-                </behaviors:ItemTappedBehavior.Actions>
-            </behaviors:ItemTappedBehavior>
-        </interactivity:Interaction.Behaviors>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Tap me!" Grid.Row="0">
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ItemTappedBehavior>
+                    <behaviors:ItemTappedBehavior.Actions>
+                        <actions:ShowMessageDialogAction/>
+                    </behaviors:ItemTappedBehavior.Actions>
+                </behaviors:ItemTappedBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+        <Button Content="Invoke me!" Grid.Row="1">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Click">
+                    <core:InvokeCommandAction Command="{Binding ClickCommand}"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+        <TextBlock Grid.Row="2" Text="{Binding Clicked}"/>
     </Grid>
 </Page>

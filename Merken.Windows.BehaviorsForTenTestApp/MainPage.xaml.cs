@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Merken.Windev.BehaviorsForTenTestApp.MVVM;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace Merken.Windev.BehaviorsForTenTestApp
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = new MainViewModel();
         }
     }
 }

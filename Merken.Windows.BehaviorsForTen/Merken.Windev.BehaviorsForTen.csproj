@@ -116,6 +116,12 @@
     <Compile Include="ActionCollection.cs" />
     <Compile Include="BehaviorBase.cs" />
     <Compile Include="BehaviorCollection.cs" />
+    <Compile Include="Core\ComparisonConditionType.cs" />
+    <Compile Include="Core\DataBindingHelper.cs" />
+    <Compile Include="Core\DataTriggerBehavior.cs" />
+    <Compile Include="Core\EventTriggerBehavior.cs" />
+    <Compile Include="Core\InvokeCommandAction.cs" />
+    <Compile Include="Core\TypeConverterHelper.cs" />
     <Compile Include="Helper\ControlHelper.cs" />
     <Compile Include="IAction.cs" />
     <Compile Include="IBehavior.cs" />
