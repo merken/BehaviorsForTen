@@ -18,7 +18,7 @@ namespace Merken.Windev.BehaviorsForTenTestApp.Behaviors
 
         protected override void ElementDetached()
         {
-            AssociatedElement.Tapped += AssociatedElementTapped;
+            AssociatedElement.Tapped -= AssociatedElementTapped;
             base.ElementDetached();
         }
 
